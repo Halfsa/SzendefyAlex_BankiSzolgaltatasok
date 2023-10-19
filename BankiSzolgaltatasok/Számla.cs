@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-	internal abstract class Szamla : BankiSzolgaltatas
+	public abstract class Szamla : BankiSzolgaltatas
 	{
 		protected int aktEgyenleg;
 		public Szamla(Tulajdonos tulaj) : base(tulaj)
@@ -21,5 +21,10 @@ namespace BankiSzolgaltatasok
 			aktEgyenleg += osszeg;
 		}
 		public abstract bool Kivesz(int osszeg);
+		public Kartya UjKartya(string kartyaszam)
+		{
+			Kartya kartyus = new Kartya(this.Tulajdonos, this, kartyaszam);
+			return kartyus;
+		}
 	}
 }
