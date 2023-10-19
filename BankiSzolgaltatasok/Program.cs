@@ -11,7 +11,7 @@
             Console.WriteLine(bank.OsszHitelkeret);
             bank.SzamlaNyitas(tulajdonos, 2331143);
             Console.WriteLine(bank.OsszHitelkeret);
-            Console.WriteLine(bank.GetLegnagyobbEgyenleguSzamla(tulajdonos)); 
+             
         }
     }
 }
