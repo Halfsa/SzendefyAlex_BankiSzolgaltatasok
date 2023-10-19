@@ -15,7 +15,7 @@ namespace BankiSzolgaltatasok
 			this.szamla = szamla;
 			this.kartyaSzam = kartyaSzam;
 		}
-
+		
 		public string KartyaSzam { get => kartyaSzam; }
 
 		public bool Vasarlas(int osszeg)
