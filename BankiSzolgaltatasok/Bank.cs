@@ -32,11 +32,13 @@ namespace BankiSzolgaltatasok
 			if (hitelKeret>0)
 			{
 				HitelSzamla szamla = new HitelSzamla(tulajdonos,hitelKeret);
+				szamlaLista.Add(szamla);
 				return szamla;
 			}
 			else if (hitelKeret==0)
 			{
 				MegtakaritasiSzamla szamla = new MegtakaritasiSzamla(tulajdonos);
+				szamlaLista.Add(szamla);
 				return szamla;
 			}
 			throw new ArgumentException("A hitelkeret nem lehet negatív!");
