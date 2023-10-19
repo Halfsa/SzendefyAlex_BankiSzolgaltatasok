@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-	internal class HitelSzamla : Szamla
+	public class HitelSzamla : Szamla
 	{
 		private int hitelKeret;
 		public HitelSzamla(Tulajdonos tulaj, int hitelKeret) : base(tulaj)

@@ -20,9 +20,6 @@ namespace BankiSzolgaltatasok
 		{
 			aktEgyenleg += osszeg;
 		}
-		public bool Kivesz(int osszeg)
-		{
-			return false;
-		}
+		public abstract bool Kivesz(int osszeg);
 	}
 }
