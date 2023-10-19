@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-	internal class Számla
+	internal class Szamla : BankiSzolgaltatas
 	{
+		private int aktEgyenleg;
+		public Szamla(Tulajdonos tulaj) : base(tulaj)
+		{
+			aktEgyenleg = 0;
+		}
+
+		public int AktEgyenleg { get => aktEgyenleg;}
+
+		public void Befizet(int osszeg)
+		{
+			aktEgyenleg += osszeg;
+		}
+		public bool Kivesz(int osszeg)
+		{
+			return false;
+		}
 	}
 }
