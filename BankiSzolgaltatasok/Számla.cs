@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-	internal class Szamla : BankiSzolgaltatas
+	internal abstract class Szamla : BankiSzolgaltatas
 	{
-		private int aktEgyenleg;
+		protected int aktEgyenleg;
 		public Szamla(Tulajdonos tulaj) : base(tulaj)
 		{
 			aktEgyenleg = 0;
