@@ -14,6 +14,7 @@ namespace BankiSzolgaltatasok
 		public MegtakaritasiSzamla(Tulajdonos tulaj) : base(tulaj)
 		{
 			alapKamat = 1.1;
+			kamat = alapKamat;
 		}
 
 		public double Kamat { get => kamat; set => kamat = value; }
@@ -29,7 +30,7 @@ namespace BankiSzolgaltatasok
 		}
 		public void KamatJovairas()
 		{
-			base.aktualisEgyenleg = Convert.ToInt32(Math.Round(aktualisEgyenleg * kamat));
+			base.aktualisEgyenleg = Convert.ToInt32(Math.Round(aktualisEgyenleg * alapKamat));
 		}
 	}
 }
