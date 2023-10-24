@@ -14,6 +14,6 @@ namespace BankiSzolgaltatasok
 			tulajdonos = tulaj;
 		}
 
-		internal Tulajdonos Tulajdonos { get => tulajdonos; }
+		public Tulajdonos Tulajdonos { get => tulajdonos; }
 	}
 }

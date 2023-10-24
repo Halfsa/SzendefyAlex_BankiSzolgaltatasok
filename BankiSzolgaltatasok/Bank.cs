@@ -50,7 +50,7 @@ namespace BankiSzolgaltatasok
 			{
 				if (item.Tulajdonos == tulajdonos)
 				{
-					egyenleg += item.AktEgyenleg;
+					egyenleg += item.AktualisEgyenleg;
 				}
 			}
 			return egyenleg;
@@ -64,9 +64,9 @@ namespace BankiSzolgaltatasok
 			{
 				if (szamlaLista[i].Tulajdonos == tulajdonos)
 				{
-					if (szamlaLista[i].AktEgyenleg>legnagyobb)
+					if (szamlaLista[i].AktualisEgyenleg>legnagyobb)
 					{
-						legnagyobb = szamlaLista[i].AktEgyenleg;
+						legnagyobb = szamlaLista[i].AktualisEgyenleg;
 						index = i;
 					}
 				}

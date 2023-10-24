@@ -18,19 +18,19 @@ namespace BankiSzolgaltatasok
 
 		public override bool Kivesz(int osszeg)
 		{
-			if (base.aktEgyenleg-osszeg < 0) 
+			if (base.aktualisEgyenleg-osszeg < 0) 
 			{
-				if (Math.Abs(base.aktEgyenleg-osszeg) > hitelKeret)
+				if (Math.Abs(base.aktualisEgyenleg-osszeg) > hitelKeret)
 				{
 					return false;
 				}
 				else 
 				{
-					aktEgyenleg -= osszeg;
+					aktualisEgyenleg -= osszeg;
 					return true; 
 				}
 			}
-			aktEgyenleg -= osszeg;
+			aktualisEgyenleg -= osszeg;
 			return true;
 		}
 	}

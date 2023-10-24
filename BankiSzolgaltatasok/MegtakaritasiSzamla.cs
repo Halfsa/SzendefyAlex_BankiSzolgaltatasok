@@ -20,16 +20,16 @@ namespace BankiSzolgaltatasok
 
 		public override bool Kivesz(int osszeg)
 		{
-			if (base.aktEgyenleg - osszeg < 0)
+			if (base.aktualisEgyenleg - osszeg < 0)
 			{
 				return false;
 			}
-			aktEgyenleg -= osszeg;
+			aktualisEgyenleg -= osszeg;
 			return true;
 		}
 		public void KamatJovairas()
 		{
-			base.aktEgyenleg = Convert.ToInt32(Math.Round(aktEgyenleg * kamat));
+			base.aktualisEgyenleg = Convert.ToInt32(Math.Round(aktualisEgyenleg * kamat));
 		}
 	}
 }

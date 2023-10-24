@@ -8,17 +8,17 @@ namespace BankiSzolgaltatasok
 {
 	public abstract class Szamla : BankiSzolgaltatas
 	{
-		protected int aktEgyenleg;
+		protected int aktualisEgyenleg;
 		public Szamla(Tulajdonos tulaj) : base(tulaj)
 		{
-			aktEgyenleg = 0;
+			aktualisEgyenleg = 0;
 		}
 
-		public int AktEgyenleg { get => aktEgyenleg;}
+		public int AktualisEgyenleg { get => aktualisEgyenleg;}
 
 		public void Befizet(int osszeg)
 		{
-			aktEgyenleg += osszeg;
+			aktualisEgyenleg += osszeg;
 		}
 		public abstract bool Kivesz(int osszeg);
 		public Kartya UjKartya(string kartyaszam)

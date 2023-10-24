@@ -8,13 +8,13 @@ namespace BankiSzolgaltatasok
 {
 	public sealed class Tulajdonos
 	{
-		private string tulaj;
+		private string nev;
 
 		public Tulajdonos(string tulaj)
 		{
-			this.tulaj = tulaj;
+			this.nev = tulaj;
 		}
 
-		public string Tulaj { get => tulaj; set => tulaj = value; }
+		public string Nev { get => nev; set => nev = value; }
 	}
 }
